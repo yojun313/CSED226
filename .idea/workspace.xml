@@ -5,14 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f67908fc-8783-45b4-af77-1c2274f6d7eb" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/HW1/20230024.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW1/COVID.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW1/COVID_edited.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW1/departments.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW1/employees.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW1/employees2.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW1/test.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CSED226_Introduction-to-Data-Analysis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CSED226_Introduction-to-Data-Analysis.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,6 +89,10 @@
       <workItem from="1726471711285" duration="3821000" />
       <workItem from="1726550033834" duration="11098000" />
       <workItem from="1726580982623" duration="198000" />
+      <workItem from="1726739665048" duration="665000" />
+      <workItem from="1726809278501" duration="131000" />
+      <workItem from="1726809487354" duration="9000" />
+      <workItem from="1726894303805" duration="632000" />
     </task>
     <servers />
   </component>
