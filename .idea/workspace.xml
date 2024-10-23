@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f67908fc-8783-45b4-af77-1c2274f6d7eb" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/HW3/20240734.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2/20230024.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/HW2/20230024.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW3/20230024.ipynb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +58,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/HW3" />
       <recent name="$PROJECT_DIR$/HW1" />
     </key>
   </component>
@@ -133,6 +137,7 @@
       <workItem from="1729098351069" duration="1114000" />
       <workItem from="1729150778983" duration="1139000" />
       <workItem from="1729154013627" duration="727000" />
+      <workItem from="1729663594635" duration="8000" />
     </task>
     <servers />
   </component>
