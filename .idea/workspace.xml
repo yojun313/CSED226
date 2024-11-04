@@ -5,15 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f67908fc-8783-45b4-af77-1c2274f6d7eb" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/HW3/20240734.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW4/HW4-1/sample_sandbox_classification.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW4/HW4-1/test.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW4/HW4-1/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW4/HW4-1/train.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CSED226_Introduction-to-Data-Analysis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CSED226_Introduction-to-Data-Analysis.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW2/20230024.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/HW2/20230024.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW3/20230024.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW3/20240734.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/HW3/20240734.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,6 +40,9 @@
     &quot;accountId&quot;: &quot;457f2a56-1479-481c-9505-b785256505ee&quot;
   }
 }</component>
+  <component name="PerforceDirect.Settings">
+    <option name="CHARSET" value="없음" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -41,22 +54,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/yojunsmacbookprp/Documents/GitHub/CSED226_Introduction-to-Data-Analysis&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Python.test.executor": "Run",
+    "Python.test2.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/yojunsmacbookprp/Documents/GitHub/CSED226_Introduction-to-Data-Analysis/HW4/HW4-1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/HW4/HW4-1" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/HW3" />
       <recent name="$PROJECT_DIR$/HW1" />
@@ -138,6 +156,15 @@
       <workItem from="1729150778983" duration="1139000" />
       <workItem from="1729154013627" duration="727000" />
       <workItem from="1729663594635" duration="8000" />
+      <workItem from="1730623454783" duration="1386000" />
+      <workItem from="1730624853663" duration="436000" />
+      <workItem from="1730625432283" duration="70000" />
+      <workItem from="1730626114576" duration="36000" />
+      <workItem from="1730639684613" duration="86000" />
+      <workItem from="1730641524345" duration="36000" />
+      <workItem from="1730644172423" duration="1428000" />
+      <workItem from="1730647113785" duration="4424000" />
+      <workItem from="1730693525468" duration="3040000" />
     </task>
     <servers />
   </component>
@@ -146,5 +173,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CSED226_Introduction_to_Data_Analysis$test.coverage" NAME="test 커버리지 결과" MODIFIED="1730702734351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW4/HW4-1" />
+    <SUITE FILE_PATH="coverage/CSED226_Introduction_to_Data_Analysis$test2.coverage" NAME="test2 커버리지 결과" MODIFIED="1730694193898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW4/HW4-1" />
   </component>
 </project>
