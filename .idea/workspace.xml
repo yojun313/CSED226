@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f67908fc-8783-45b4-af77-1c2274f6d7eb" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW4/HW4-1/1_KNeighbors.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW4/HW4-1/HW4-1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW4/HW4-2/2_KNeighbors.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW4/HW4-2/HW4-2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW4/HW4-2/result.csv" beforeDir="false" afterPath="$PROJECT_DIR$/HW4/HW4-2/result.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,6 +198,21 @@
       <workItem from="1731301761211" duration="466000" />
       <workItem from="1731302351762" duration="598000" />
       <workItem from="1731307123723" duration="500000" />
+      <workItem from="1731308963191" duration="26000" />
+      <workItem from="1731327071098" duration="597000" />
+      <workItem from="1731328755987" duration="92000" />
+      <workItem from="1731341326099" duration="598000" />
+      <workItem from="1731370616400" duration="597000" />
+      <workItem from="1731382965923" duration="94000" />
+      <workItem from="1731388391881" duration="598000" />
+      <workItem from="1731390475615" duration="391000" />
+      <workItem from="1731390893725" duration="193000" />
+      <workItem from="1731391214312" duration="22000" />
+      <workItem from="1731393120938" duration="716000" />
+      <workItem from="1731393916670" duration="597000" />
+      <workItem from="1731396044412" duration="465000" />
+      <workItem from="1731397326127" duration="381000" />
+      <workItem from="1731399749439" duration="264000" />
     </task>
     <servers />
   </component>
