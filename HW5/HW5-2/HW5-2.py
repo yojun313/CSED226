@@ -1,7 +1,6 @@
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor, VotingRegressor
 from xgboost import XGBRegressor
-from lightgbm import LGBMRegressor
 from sklearn.model_selection import GridSearchCV, train_test_split
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 from sklearn.preprocessing import StandardScaler
@@ -85,26 +84,6 @@ xgb_grid_search.fit(X_train_scaled, y_train)
 best_xgb_model = xgb_grid_search.best_estimator_
 
 # ======================================================
-# 4. LightGBM Regressor
-# ======================================================
-lgbm_param_grid = {
-    'n_estimators': [100, 200],
-    'learning_rate': [0.05, 0.1],
-    'max_depth': [3, 5],
-    'subsample': [0.8, 1.0]
-}
-lgbm_grid_search = GridSearchCV(
-    estimator=LGBMRegressor(random_state=42),
-    param_grid=lgbm_param_grid,
-    cv=3,
-    scoring='neg_mean_absolute_error',
-    verbose=2,
-    n_jobs=-1
-)
-lgbm_grid_search.fit(X_train_scaled, y_train)
-best_lgbm_model = lgbm_grid_search.best_estimator_
-
-# ======================================================
 # 5. Voting Regressor (Ensemble)
 # ======================================================
 voting_regressor = VotingRegressor(
@@ -112,7 +91,6 @@ voting_regressor = VotingRegressor(
         ('rf', best_rf_model),
         ('gbm', best_gbm_model),
         ('xgb', best_xgb_model),
-        ('lgbm', best_lgbm_model)
     ]
 )
 voting_regressor.fit(X_train_scaled, y_train)
@@ -123,7 +101,6 @@ voting_regressor.fit(X_train_scaled, y_train)
 y_val_pred_rf = best_rf_model.predict(X_val_scaled)
 y_val_pred_gbm = best_gbm_model.predict(X_val_scaled)
 y_val_pred_xgb = best_xgb_model.predict(X_val_scaled)
-y_val_pred_lgbm = best_lgbm_model.predict(X_val_scaled)
 y_val_pred_ensemble = voting_regressor.predict(X_val_scaled)
 
 # 평가 지표 계산
@@ -139,10 +116,6 @@ mse_xgb = mean_squared_error(y_val, y_val_pred_xgb)
 mae_xgb = mean_absolute_error(y_val, y_val_pred_xgb)
 print(f"XGBoost Validation MSE: {mse_xgb:.2f}, MAE: {mae_xgb:.2f}")
 
-mse_lgbm = mean_squared_error(y_val, y_val_pred_lgbm)
-mae_lgbm = mean_absolute_error(y_val, y_val_pred_lgbm)
-print(f"LightGBM Validation MSE: {mse_lgbm:.2f}, MAE: {mae_lgbm:.2f}")
-
 mse_ensemble = mean_squared_error(y_val, y_val_pred_ensemble)
 mae_ensemble = mean_absolute_error(y_val, y_val_pred_ensemble)
 print(f"Ensemble Validation MSE: {mse_ensemble:.2f}, MAE: {mae_ensemble:.2f}")
@@ -157,7 +130,6 @@ real_data_scaled = scaler.transform(real_data)
 real_pred_rf = best_rf_model.predict(real_data_scaled)
 real_pred_gbm = best_gbm_model.predict(real_data_scaled)
 real_pred_xgb = best_xgb_model.predict(real_data_scaled)
-real_pred_lgbm = best_lgbm_model.predict(real_data_scaled)
 real_pred_ensemble = voting_regressor.predict(real_data_scaled)
 
 # 결과 저장
