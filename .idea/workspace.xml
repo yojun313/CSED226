@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f67908fc-8783-45b4-af77-1c2274f6d7eb" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW5/HW5-1/HW5-1.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW5/HW5-1/HW5-1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW5/HW5-2/HW5-2.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW5/HW5-2/HW5-2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,34 +48,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Python.1_KNeighbors.executor": "Run",
-    "Python.2_KNeighbors.executor": "Run",
-    "Python.DecisionTree.executor": "Run",
-    "Python.DecisionTree_test.executor": "Run",
-    "Python.HW4-1.executor": "Run",
-    "Python.HW4-2.executor": "Run",
-    "Python.HW5-1.executor": "Run",
-    "Python.HW5-2.executor": "Run",
-    "Python.KNeighbors.executor": "Run",
-    "Python.correlation.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.test2.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/yojunsmacbookprp/Documents/GitHub/CSED226_Introduction-to-Data-Analysis",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.1_KNeighbors.executor&quot;: &quot;Run&quot;,
+    &quot;Python.2_KNeighbors.executor&quot;: &quot;Run&quot;,
+    &quot;Python.DecisionTree.executor&quot;: &quot;Run&quot;,
+    &quot;Python.DecisionTree_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.HW4-1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.HW4-2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.HW5-1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.HW5-2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.KNeighbors.executor&quot;: &quot;Run&quot;,
+    &quot;Python.correlation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test2.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/yojunsmacbookprp/Documents/GitHub/CSED226_Introduction-to-Data-Analysis&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/HW4/HW4-1" />
@@ -231,6 +229,9 @@
       <workItem from="1732328273638" duration="598000" />
       <workItem from="1732339683426" duration="249000" />
       <workItem from="1732416204492" duration="7763000" />
+      <workItem from="1732436099161" duration="1000" />
+      <workItem from="1732454913172" duration="969000" />
+      <workItem from="1732632917714" duration="601000" />
     </task>
     <servers />
   </component>
