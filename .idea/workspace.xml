@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f67908fc-8783-45b4-af77-1c2274f6d7eb" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/HW4/HW4.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW5/HW5.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW6/HW6.pptx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,9 +37,6 @@
     &quot;accountId&quot;: &quot;457f2a56-1479-481c-9505-b785256505ee&quot;
   }
 }</component>
-  <component name="PerforceDirect.Settings">
-    <option name="CHARSET" value="없음" />
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -81,6 +81,9 @@
       <recent name="$PROJECT_DIR$/HW4/HW4-1" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/HW4" />
+      <recent name="$PROJECT_DIR$/HW5" />
+      <recent name="$PROJECT_DIR$/HW6" />
       <recent name="$PROJECT_DIR$/HW3" />
       <recent name="$PROJECT_DIR$/HW1" />
     </key>
@@ -234,7 +237,8 @@
       <workItem from="1732632917714" duration="1200000" />
       <workItem from="1732689679087" duration="578000" />
       <workItem from="1732696297092" duration="28000" />
-      <workItem from="1732696386179" duration="606000" />
+      <workItem from="1732696386179" duration="619000" />
+      <workItem from="1733504449778" duration="381000" />
     </task>
     <servers />
   </component>
