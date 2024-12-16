@@ -5,9 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f67908fc-8783-45b4-af77-1c2274f6d7eb" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/HW4/HW4.pptx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW5/HW5.pptx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW6/HW6.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW6/best.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW6/cluster_result.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW6/clustering.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW6/clustering2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW6/pca.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW6/preprocess.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW6/src/categorical/Countplot of Occupation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW6/src/categorical/Countplot of education level.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW6/src/categorical/Countplot of education.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW6/src/categorical/Countplot of income.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW6/src/categorical/Countplot of marital status.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW6/src/categorical/Countplot of native country.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW6/src/categorical/Countplot of race.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW6/src/categorical/Countplot of relationship.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW6/src/categorical/Countplot of sex.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW6/src/numeric/Correlation Heatmap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW6/src/numeric/Distribution of Investment loss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW6/src/numeric/Distribution of age.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW6/src/numeric/Distribution of hours per week.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW6/src/numeric/Distribution of investment profit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW6/src/numeric/pairplot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tool/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CSED226_Introduction-to-Data-Analysis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CSED226_Introduction-to-Data-Analysis.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +80,14 @@
     &quot;Python.HW5-1.executor&quot;: &quot;Run&quot;,
     &quot;Python.HW5-2.executor&quot;: &quot;Run&quot;,
     &quot;Python.KNeighbors.executor&quot;: &quot;Run&quot;,
+    &quot;Python.best.executor&quot;: &quot;Run&quot;,
+    &quot;Python.clustering.executor&quot;: &quot;Run&quot;,
+    &quot;Python.clustering2.executor&quot;: &quot;Run&quot;,
     &quot;Python.correlation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pca.executor&quot;: &quot;Run&quot;,
+    &quot;Python.preprocess.executor&quot;: &quot;Run&quot;,
+    &quot;Python.run.executor&quot;: &quot;Run&quot;,
     &quot;Python.test.executor&quot;: &quot;Run&quot;,
     &quot;Python.test2.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -81,12 +108,38 @@
       <recent name="$PROJECT_DIR$/HW4/HW4-1" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/HW4" />
-      <recent name="$PROJECT_DIR$/HW5" />
-      <recent name="$PROJECT_DIR$/HW6" />
-      <recent name="$PROJECT_DIR$/HW3" />
-      <recent name="$PROJECT_DIR$/HW1" />
+      <recent name="$PROJECT_DIR$/tool" />
+      <recent name="$PROJECT_DIR$/venv" />
+      <recent name="$PROJECT_DIR$/HW6/src/categorical" />
+      <recent name="$PROJECT_DIR$/HW6/src/numetric" />
+      <recent name="$PROJECT_DIR$/HW6/src" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="run" type="PythonConfigurationType" factoryName="Python">
+      <module name="CSED226_Introduction-to-Data-Analysis" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (CSED226_Introduction-to-Data-Analysis)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tool/run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -238,7 +291,59 @@
       <workItem from="1732689679087" duration="578000" />
       <workItem from="1732696297092" duration="28000" />
       <workItem from="1732696386179" duration="619000" />
-      <workItem from="1733504449778" duration="381000" />
+      <workItem from="1733504449778" duration="488000" />
+      <workItem from="1733505772924" duration="789000" />
+      <workItem from="1733537803131" duration="11278000" />
+      <workItem from="1733593319208" duration="602000" />
+      <workItem from="1733625861036" duration="598000" />
+      <workItem from="1733633967669" duration="484000" />
+      <workItem from="1733634507488" duration="79000" />
+      <workItem from="1733634603938" duration="53000" />
+      <workItem from="1733634757628" duration="598000" />
+      <workItem from="1733636498195" duration="598000" />
+      <workItem from="1733639285375" duration="103000" />
+      <workItem from="1733640313929" duration="3232000" />
+      <workItem from="1733661160364" duration="598000" />
+      <workItem from="1733665983227" duration="81000" />
+      <workItem from="1733666091511" duration="13000" />
+      <workItem from="1733673122629" duration="598000" />
+      <workItem from="1733677776611" duration="1219000" />
+      <workItem from="1733707471403" duration="3496000" />
+      <workItem from="1733717808938" duration="115000" />
+      <workItem from="1733718149146" duration="598000" />
+      <workItem from="1733718913125" duration="130000" />
+      <workItem from="1733720198338" duration="622000" />
+      <workItem from="1733723241649" duration="598000" />
+      <workItem from="1733738936094" duration="598000" />
+      <workItem from="1733746067090" duration="418000" />
+      <workItem from="1733766017599" duration="1716000" />
+      <workItem from="1733773790818" duration="598000" />
+      <workItem from="1733815579122" duration="598000" />
+      <workItem from="1733817871083" duration="598000" />
+      <workItem from="1733819279868" duration="1531000" />
+      <workItem from="1733834398186" duration="598000" />
+      <workItem from="1733835928734" duration="598000" />
+      <workItem from="1733839597960" duration="270000" />
+      <workItem from="1733840403568" duration="97000" />
+      <workItem from="1733847648960" duration="13000" />
+      <workItem from="1733847753744" duration="50000" />
+      <workItem from="1733848025852" duration="526000" />
+      <workItem from="1733850261695" duration="598000" />
+      <workItem from="1733852018914" duration="66000" />
+      <workItem from="1733853611467" duration="1751000" />
+      <workItem from="1733855424938" duration="612000" />
+      <workItem from="1733856621017" duration="29000" />
+      <workItem from="1733856769641" duration="598000" />
+      <workItem from="1733883108099" duration="598000" />
+      <workItem from="1733889583187" duration="320000" />
+      <workItem from="1733921252104" duration="225000" />
+      <workItem from="1733921699539" duration="1196000" />
+      <workItem from="1733925642958" duration="154000" />
+      <workItem from="1733934939296" duration="141000" />
+      <workItem from="1733935397969" duration="5000" />
+      <workItem from="1733937031656" duration="1248000" />
+      <workItem from="1733944927965" duration="736000" />
+      <workItem from="1733945843457" duration="25000" />
     </task>
     <servers />
   </component>
@@ -249,13 +354,20 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CSED226_Introduction_to_Data_Analysis$clustering2.coverage" NAME="clustering2 커버리지 결과" MODIFIED="1733555743040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW6" />
     <SUITE FILE_PATH="coverage/CSED226_Introduction_to_Data_Analysis$DecisionTree_test.coverage" NAME="DecisionTree_test 커버리지 결과" MODIFIED="1730781217414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW4/HW4-1" />
     <SUITE FILE_PATH="coverage/CSED226_Introduction_to_Data_Analysis$KNeighbors.coverage" NAME="KNeighbors 커버리지 결과" MODIFIED="1730781645314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW4/HW4-1" />
     <SUITE FILE_PATH="coverage/CSED226_Introduction_to_Data_Analysis$HW4_1.coverage" NAME="HW4-1 커버리지 결과" MODIFIED="1732191416520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW4/HW4-1" />
+    <SUITE FILE_PATH="coverage/CSED226_Introduction_to_Data_Analysis$generator.coverage" NAME="generator 커버리지 결과" MODIFIED="1733854985115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tool" />
+    <SUITE FILE_PATH="coverage/CSED226_Introduction_to_Data_Analysis$clustering.coverage" NAME="clustering 커버리지 결과" MODIFIED="1733556744430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW6" />
     <SUITE FILE_PATH="coverage/CSED226_Introduction_to_Data_Analysis$HW5_2.coverage" NAME="HW5-2 커버리지 결과" MODIFIED="1732421722459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW5/HW5-2" />
+    <SUITE FILE_PATH="coverage/CSED226_Introduction_to_Data_Analysis$best.coverage" NAME="best 커버리지 결과" MODIFIED="1733571648233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW6" />
     <SUITE FILE_PATH="coverage/CSED226_Introduction_to_Data_Analysis$DecisionTree.coverage" NAME="DecisionTree 커버리지 결과" MODIFIED="1730781430874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW4/HW4-1" />
+    <SUITE FILE_PATH="coverage/CSED226_Introduction_to_Data_Analysis$pca.coverage" NAME="pca 커버리지 결과" MODIFIED="1733553961889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW6" />
     <SUITE FILE_PATH="coverage/CSED226_Introduction_to_Data_Analysis$HW5_1.coverage" NAME="HW5-1 커버리지 결과" MODIFIED="1732418637553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW5/HW5-1" />
     <SUITE FILE_PATH="coverage/CSED226_Introduction_to_Data_Analysis$test.coverage" NAME="test 커버리지 결과" MODIFIED="1730703996317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW4/HW4-1" />
+    <SUITE FILE_PATH="coverage/CSED226_Introduction_to_Data_Analysis$preprocess.coverage" NAME="preprocess 커버리지 결과" MODIFIED="1733552398816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW6" />
+    <SUITE FILE_PATH="coverage/CSED226_Introduction_to_Data_Analysis$run.coverage" NAME="run 커버리지 결과" MODIFIED="1733855291859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/CSED226_Introduction_to_Data_Analysis$test2.coverage" NAME="test2 커버리지 결과" MODIFIED="1730694193898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW4/HW4-1" />
     <SUITE FILE_PATH="coverage/CSED226_Introduction_to_Data_Analysis$correlation.coverage" NAME="correlation 커버리지 결과" MODIFIED="1730908693403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW4/HW4-2" />
     <SUITE FILE_PATH="coverage/CSED226_Introduction_to_Data_Analysis$1_KNeighbors.coverage" NAME="1_KNeighbors 커버리지 결과" MODIFIED="1730782818065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HW4/HW4-1" />
