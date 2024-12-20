@@ -6,6 +6,7 @@ from sklearn.metrics import accuracy_score
 
 # 범주형 데이터를 숫자로 변환할 LabelEncoder 초기화
 label_encoder = LabelEncoder()
+label_encoder_2 = LabelEncoder()
 
 # ======================================================
 # 1. train_data 불러오기 및 전처리
@@ -17,15 +18,16 @@ train_data = pd.read_csv('train.csv')
 train_data = train_data.dropna()
 
 # 'position' 열을 숫자로 변환 (범주형 -> 정수형)
-train_data['position'] = label_encoder.fit_transform(train_data['position'])
+train_data['age_group'] = label_encoder.fit_transform(train_data['age_group'])
+train_data['sex'] = label_encoder_2.fit_transform(train_data['sex'])
 
 # ======================================================
 # 2. 특성(feature)과 타겟(target) 변수 분리
 # ======================================================
 # X: 입력 데이터, y: 출력 데이터 (position)
 # 'position' 열과 분석에 필요 없는 열 제거
-X = train_data.drop(columns=['position', 'SEASON_ID', 'TEAM_ID', 'GP', 'GS', 'MIN', 'PLAYER_AGE'])
-y = train_data['position']
+X = train_data.drop(columns=['age_group'])
+y = train_data['age_group']
 
 # ======================================================
 # 3. 학습/검증 데이터 분리
@@ -78,7 +80,7 @@ print(f"Validation Accuracy with Best Parameters: {accuracy:.2f}")
 # ======================================================
 # 테스트 데이터 로드 및 불필요한 열 제거
 real_data = pd.read_csv('test.csv')
-real_data = real_data.drop(columns=['SEASON_ID', 'TEAM_ID', 'ID', 'PLAYER_AGE'])
+real_data['sex'] = label_encoder_2.fit_transform(real_data['sex'])
 
 # 테스트 데이터에 대해 최적의 모델로 예측
 real_pred = best_rf_model.predict(real_data)
@@ -88,9 +90,9 @@ real_pred_labels = label_encoder.inverse_transform(real_pred)
 
 # 결과 데이터프레임 생성
 result_df = pd.DataFrame({
-    'ID': range(1, len(real_pred_labels) + 1),  # ID는 1부터 시작
-    'position': real_pred_labels               # 예측된 position
+    'idx': range(0, len(real_pred_labels)),  # ID는 1부터 시작
+    'age_group': real_pred_labels               # 예측된 position
 })
 
 # 결과 CSV 파일로 저장
-result_df.to_csv('result.csv', index=False)
+result_df.to_csv('result/ensemble.csv', index=False)

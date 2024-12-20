@@ -30,15 +30,15 @@ def preprocess_data(train_path, test_path):
 
     # 타겟 변수(position)를 숫자로 인코딩
     label_encoder = LabelEncoder()
-    train_data['age_group'] = label_encoder.fit_transform(train_data['age_group'])
+    train_data['position'] = label_encoder.fit_transform(train_data['position'])
 
     # 학습 데이터에서 타겟 및 비특성 열 제거
-    X_train = train_data.drop(columns=['age_group', 'sex', 'FastingBloodSugar'])
-    y_train = train_data['age_group']
+    X_train = train_data.drop(columns=['position', 'SEASON_ID', 'TEAM_ID', 'GP', 'GS', 'MIN', 'PLAYER_AGE'])
+    y_train = train_data['position']
 
     # 테스트 데이터 로드 및 비특성 열 제거
     real_data = pd.read_csv(test_path)
-    real_data = real_data.drop(columns=['sex', 'FastingBloodSugar'])
+    real_data = real_data.drop(columns=['SEASON_ID', 'TEAM_ID', 'ID', 'PLAYER_AGE'])
 
     return X_train, y_train, real_data, label_encoder
 
@@ -59,8 +59,8 @@ def save_results(predictions, label_encoder, output_path):
 
     # 결과를 ID와 position 형태의 데이터프레임으로 생성
     result_df = pd.DataFrame({
-        'idx': range(0, len(real_pred_labels)),  # ID는 1부터 시작
-        'age_group': real_pred_labels  # position 라벨
+        'ID': range(1, len(real_pred_labels) + 1),  # ID는 1부터 시작
+        'position': real_pred_labels  # position 라벨
     })
 
     # 결과를 CSV 파일로 저장
@@ -164,16 +164,37 @@ def naive_bayes_classifier(train_path, test_path, output_path):
     save_results(predictions, label_encoder, output_path)
 
 
+# Rule-based Model (Manual example)
+def rule_based_model(train_path, test_path, output_path):
+    """
+    규칙 기반(Rule-based) 모델을 사용하여 데이터를 예측.
+    - 단순한 규칙을 기반으로 예측 값을 생성.
+
+    Parameters:
+        train_path (str): 학습 데이터 파일 경로.
+        test_path (str): 테스트 데이터 파일 경로.
+        output_path (str): 결과를 저장할 CSV 파일 경로.
+    """
+    # 데이터 전처리 (학습 데이터는 사용하지 않음)
+    _, _, real_data, label_encoder = preprocess_data(train_path, test_path)
+
+    # 간단한 규칙 예제: PTS(점수)가 20보다 크면 0, 아니면 1로 예측
+    predictions = real_data.apply(lambda row: 0 if row['PTS'] > 20 else 1, axis=1)
+    predictions = predictions.astype(int).to_numpy()
+
+    # 결과 저장
+    save_results(predictions, label_encoder, output_path)
+
 
 # 사용 예시
 # Decision Tree 사용
-decision_tree_classifier('train.csv', 'test.csv', 'result/decision_tree_results.csv')
+decision_tree_classifier('train.csv', 'test.csv', 'decision_tree_results.csv')
 
 # K-Nearest Neighbor 사용
-#knn_classifier('train.csv', 'test.csv', 'result/knn_results.csv', n_neighbors=10)
+#knn_classifier('train.csv', 'test.csv', 'knn_results.csv', n_neighbors=10)
 
 # Naive Bayes 사용
-#naive_bayes_classifier('train.csv', 'test.csv', 'result/naive_bayes_results.csv')
+#naive_bayes_classifier('train.csv', 'test.csv', 'naive_bayes_results.csv')
 
-
-sex도 label_encoder를 사용해야하는데 그럼 label_encoder가 두개야. 어떻게 처리하지
+# Rule-based Model 사용
+#rule_based_model('train.csv', 'test.csv', 'rule_based_results.csv')

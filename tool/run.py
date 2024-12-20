@@ -9,7 +9,7 @@ def generate(query):
         client = OpenAI(api_key='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')
 
         # 모델 이름 수정: gpt-4-turbo
-        model = "gpt-4-turbo"
+        model = "gpt-4o"
 
         # ChatGPT API 요청
         response = client.chat.completions.create(

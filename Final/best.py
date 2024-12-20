@@ -29,18 +29,27 @@ def preprocess_data(train_path, test_path):
     train_data = train_data.dropna()
 
     # 타겟 변수(position)를 숫자로 인코딩
-    label_encoder = LabelEncoder()
-    train_data['age_group'] = label_encoder.fit_transform(train_data['age_group'])
+
+    label_encoders = {}
+    for column in ['sex', 'age_group']:  # 인코딩할 열들
+        le = LabelEncoder()
+        train_data[column] = le.fit_transform(train_data[column])
+        label_encoders[column] = le
 
     # 학습 데이터에서 타겟 및 비특성 열 제거
-    X_train = train_data.drop(columns=['age_group', 'sex', 'FastingBloodSugar'])
+    X_train = train_data.drop(columns=['age_group', 'FastingBloodSugar', 'BMI'])
     y_train = train_data['age_group']
 
     # 테스트 데이터 로드 및 비특성 열 제거
     real_data = pd.read_csv(test_path)
-    real_data = real_data.drop(columns=['sex', 'FastingBloodSugar'])
+    real_data = real_data.drop(columns=['FastingBloodSugar', 'BMI'])
 
-    return X_train, y_train, real_data, label_encoder
+    # 테스트 데이터에 동일한 인코딩 적용
+    for column, le in label_encoders.items():
+        if column in real_data.columns:
+            real_data[column] = le.transform(real_data[column])
+
+    return X_train, y_train, real_data, label_encoders
 
 
 # 공통 결과 저장 함수
@@ -55,7 +64,7 @@ def save_results(predictions, label_encoder, output_path):
         output_path (str): 결과를 저장할 CSV 파일 경로.
     """
     # 숫자로 예측된 값을 라벨로 변환
-    real_pred_labels = label_encoder.inverse_transform(predictions)
+    real_pred_labels = label_encoder['age_group'].inverse_transform(predictions)
 
     # 결과를 ID와 position 형태의 데이터프레임으로 생성
     result_df = pd.DataFrame({
@@ -174,6 +183,3 @@ decision_tree_classifier('train.csv', 'test.csv', 'result/decision_tree_results.
 
 # Naive Bayes 사용
 #naive_bayes_classifier('train.csv', 'test.csv', 'result/naive_bayes_results.csv')
-
-
-sex도 label_encoder를 사용해야하는데 그럼 label_encoder가 두개야. 어떻게 처리하지

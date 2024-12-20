@@ -1,49 +1,77 @@
-여기서는 Python을 이용하여 CSV 파일을 불러와 분류(classification)를 수행하는 간단한 예제 코드를 제공하겠습니다. 이 예제에서 `pandas` 라이브러리를 사용하여 데이터를 처리하고 `scikit-learn` 라이브러리를 사용하여 로지스틱 회귀 모델을 통해 분류 작업을 수행하겠습니다. 사용할 CSV 파일은 4개의 열을 가졌다고 가정하며, 마지막 열이 타겟 변수(라벨)이라고 가정합니다.
+To handle multiple categorical columns with label encoding, such as `age_group` and `sex`, you can use separate `LabelEncoder` instances for each column. You can create a dictionary to map each column to its corresponding `LabelEncoder`. Here's how you can modify the `preprocess_data` function to do this:
 
-1. 필요한 라이브러리들을 설치하고 가져오기:
-   ```bash
-   pip install numpy pandas scikit-learn
-   ```
+```python
+def preprocess_data(train_path, test_path):
+    """
+    학습 및 테스트 데이터를 전처리하는 함수.
+    - 학습 데이터에서 결측치를 제거하고, 선택된 열들을 숫자로 인코딩.
+    - 테스트 데이터에서 분석에 불필요한 열 제거.
 
-2. 코드 작성:
-   ```python
-   import pandas as pd
-   from sklearn.model_selection import train_test_split
-   from sklearn.linear_model import LogisticRegression
-   from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+    Parameters:
+        train_path (str): 학습 데이터 파일 경로.
+        test_path (str): 테스트 데이터 파일 경로.
 
-   # CSV 파일 불러오기
-   df = pd.read_csv('yourfile.csv')  # 'yourfile.csv'를 여러분의 파일 경로로 변경하세요.
+    Returns:
+        X_train (DataFrame): 학습 데이터의 특성(features).
+        y_train (Series): 학습 데이터의 타겟 변수(labels).
+        real_data (DataFrame): 테스트 데이터의 특성(features).
+        label_encoders (dict): 각 열에 대해 숫자로 변환하는 인코더 객체들의 사전.
+    """
+    # 학습 데이터 로드 및 결측치 제거
+    train_data = pd.read_csv(train_path)
+    train_data = train_data.dropna()
 
-   # 데이터 확인
-   print(df.head())
+    # 열을 숫자로 인코딩할 LabelEncoder 객체들 생성
+    label_encoders = {}
+    for column in ['sex', 'age_group']:  # 인코딩할 열들
+        le = LabelEncoder()
+        train_data[column] = le.fit_transform(train_data[column])
+        label_encoders[column] = le
 
-   # 특성과 타겟 분리
-   X = df.iloc[:, :-1]  # 마지막 열 제외 모든 열을 특성으로 사용
-   y = df.iloc[:, -1]   # 마지막 열을 타겟으로 사용
+    # 타겟 변수 분리
+    y_train = train_data['age_group']
 
-   # 데이터를 훈련 세트와 테스트 세트로 분리
-   X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    # 학습 데이터에서 타겟 및 비특성 열 제거
+    X_train = train_data.drop(columns=['age_group', 'FastingBloodSugar'])
 
-   # 모델 생성 및 훈련
-   model = LogisticRegression()
-   model.fit(X_train, y_train)
+    # 테스트 데이터 로드 및 인코딩
+    real_data = pd.read_csv(test_path)
+    real_data = real_data.drop(columns=['FastingBloodSugar'])
 
-   # 테스트 데이터에 대한 예측
-   y_pred = model.predict(X_test)
+    # 테스트 데이터에 동일한 인코딩 적용
+    for column, le in label_encoders.items():
+        if column in real_data.columns:
+            real_data[column] = le.transform(real_data[column])
 
-   # 모델 평가
-   print("Accuracy:", accuracy_score(y_test, y_pred))
-   print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
-   print("Classification Report:\n", classification_report(y_test, y_pred))
-   ```
+    return X_train, y_train, real_data, label_encoders
+```
 
-위 코드에서는 다음과 같은 단계로 분류 작업을 수행합니다:
+In this approach, we maintain a dictionary `label_encoders` that keeps track of each `LabelEncoder` specific to a column. This allows you to use the correct encoder to transform data both during training and on the real (test) dataset. You can use this dictionary later to decode the predicted labels in the `save_results` function if you need to reverse the encoding.
 
-- CSV 파일을 불러옵니다.
-- 데이터를 특성(X)과 타겟(y)으로 분리합니다.
-- 데이터를 훈련 세트와 테스트 세트로 나눕니다.
-- 로지스틱 회귀 모델을 훈련시키고, 테스트 데이터에 대해 예측을 수행합니다.
-- 모델의 정확도, 혼동 행렬, 분류 보고서를 출력하여 모델의 성능을 평가합니다.
+Make sure that when you decode the predictions in `save_results`, you use the appropriate encoder for the target variable (in this case, `age_group`). Here’s an updated version of `save_results` to handle this:
 
-이 코드를 사용하기 전에 `yourfile.csv`를 분석하려는 파일의 경로로 변경하세요. 만약 데이터 특성에 따라 조정이 필요하다면, 예를 들어 다른 분류기 모델을 사용하거나 전처리 단계를 추가하는 것을 고려할 수 있습니다.
+```python
+def save_results(predictions, label_encoders, output_path):
+    """
+    모델 예측 결과를 저장하는 함수.
+    - 예측된 숫자 값을 원래 라벨로 디코딩 후, 결과를 CSV로 저장.
+
+    Parameters:
+        predictions (array): 모델이 예측한 값.
+        label_encoders (dict): 각 열에 대해 숫자 값을 라벨로 변환하는 인코더 객체들의 사전.
+        output_path (str): 결과를 저장할 CSV 파일 경로.
+    """
+    # 숫자로 예측된 값을 라벨로 변환 (타겟은 age_group)
+    real_pred_labels = label_encoders['age_group'].inverse_transform(predictions)
+
+    # 결과를 ID와 age_group 형태의 데이터프레임으로 생성
+    result_df = pd.DataFrame({
+        'idx': range(len(real_pred_labels)),  # ID는 0부터 시작
+        'age_group': real_pred_labels  # age_group 라벨
+    })
+
+    # 결과를 CSV 파일로 저장
+    result_df.to_csv(output_path, index=False)
+```
+
+Remember to export and utilize the updated functions to ensure proper label encoding and decoding for all relevant categories in your datasets.
